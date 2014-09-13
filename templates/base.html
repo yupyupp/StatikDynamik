@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ HTML_LANG }}>
+	<head>
+		<title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="author" content="{{ AUTHOR }}">
+		<link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
+		<link rel="stylesheet" href="{{ SITEURL }}/theme/css/glitch.css" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<div class="glitch" data-text="StatikDynamik">Statik.Dynamik</div> 
+			<div class="navbar">
+				<ul>
+					% for title, link in MENUITEMS %}
+					<li><a href="{{ link }}">{{ title }}</a></li>
+					{% endfor %}
+					{% if DISPLAY_PAGES_ON_MENU != False %}
+					{% for p in PAGES %}
+					<li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+					{% endfor %}
+					<li><a href="{{ SITEURL }}/archives.html">Archive</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</header>
+
+		<div class="main">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		<footer>
+			<p>Admin: <a href="mailto:{{EMAIL}}">{{AUTHOR}}</a></p>
+			<p>Proudly power by <a href="http://getpelican.com">Pelican Static Site Generator</a></p>
+			<p>Theme by <a href="https://github.com/kd8zev">kd8zev</a></p>
+		</footer>
+	</body>
+</html>
