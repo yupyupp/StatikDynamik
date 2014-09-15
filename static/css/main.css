@@ -30,11 +30,10 @@ a:hover {
 	background-color:black;
 	text-align: left;
 }
-	
 .navbar {
-	width: 100%;
+	width: 85%;
 	float: left;
-	margin: 0em 2em 5em 3em;
+	margin: 0em 2em 5em 15%;
 	list-style: none;
 	background-color: #330066;
 	padding-bottom: 1em;
@@ -55,6 +54,36 @@ a:hover {
 	font-weight: bold;
 }
 .navbar a:hover {
+	padding-right: 40px;
+	padding-left: 10px;
+}
+
+.footnav {
+	width: 85%;
+	float: left;
+	margin: 5em 15% 5em 0;
+	list-style: none;
+	background-color: cyan;
+	padding-bottom: 1em;
+	padding-top: 16px;
+	padding-left: 15px;
+}
+.footnav li {
+	float: left;
+	color: black;
+	list-style-type: none;
+}
+.footnav a {
+	-webkit-transition: all 0.25s linear;
+	-moz-transition: all 0.25s linear;
+	-o-transition: all 0.25s linear;
+	transition: all 0.25s linear;
+	padding-right: 30px;
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+}
+.footnav a:hover {
 	padding-right: 40px;
 	padding-left: 10px;
 }

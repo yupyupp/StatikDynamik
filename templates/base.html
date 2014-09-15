@@ -30,8 +30,12 @@
 			{% block content %}
 			{% endblock %}
 		</div>
-
 		<footer>
+			<div class="footnav">
+				{% for name, link in SOCIAL %}
+				<li><a href="{{ link }}">{{ name }}</a></li>
+				{% endfor %}
+			</div>
 			<p>Admin: <a href="mailto:{{EMAIL}}">{{AUTHOR}}</a></p>
 			<p>Proudly power by <a href="http://getpelican.com">Pelican Static Site Generator</a></p>
 			<p>Theme by <a href="https://github.com/kd8zev/StaikDynamik">kd8zev</a></p>
